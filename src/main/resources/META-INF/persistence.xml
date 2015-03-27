@@ -1,0 +1,12 @@
+<persistence xmlns="http://java.sun.com/xml/ns/persistence"
+             xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+             version="1.0">
+    <persistence-unit name="account" transaction-type="RESOURCE_LOCAL">
+        <class>test.Account</class>
+        <properties>
+            <property name="openjpa.jdbc.SynchronizeMappings" value="buildSchema" />
+            <property name="openjpa.ConnectionURL" value="jdbc:derby:testdb;create=true" />
+            <property name="openjpa.ConnectionDriverName" value="org.apache.derby.jdbc.EmbeddedDriver" />
+        </properties>
+    </persistence-unit>
+</persistence>

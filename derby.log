@@ -1,0 +1,13 @@
+----------------------------------------------------------------
+Fri Mar 27 12:45:06 EDT 2015:
+Booting Derby version The Apache Software Foundation - Apache Derby - 10.11.1.1 - (1616546): instance a816c00e-014c-5c1f-6db4-00000c5e5678 
+on database directory /home/sol/NetBeansProjects/jdbctest/testdb with class loader sun.misc.Launcher$AppClassLoader@73d16e93 
+Loaded from file:/home/sol/.m2/repository/org/apache/derby/derby/10.11.1.1/derby-10.11.1.1.jar
+java.vendor=Oracle Corporation
+java.runtime.version=1.8.0_25-b17
+user.dir=/home/sol/NetBeansProjects/jdbctest
+os.name=Linux
+os.arch=amd64
+os.version=3.2.0-52-generic
+derby.system.home=null
+Database Class Loader started - derby.database.classpath=''
