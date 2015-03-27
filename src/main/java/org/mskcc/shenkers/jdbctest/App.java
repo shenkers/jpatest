@@ -1,6 +1,8 @@
 package org.mskcc.shenkers.jdbctest;
 
 import java.io.File;
+import java.net.InetAddress;
+import java.net.UnknownHostException;
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.SQLException;
@@ -14,6 +16,7 @@ import javax.persistence.EntityTransaction;
 import javax.persistence.Persistence;
 import javax.persistence.criteria.CriteriaQuery;
 import javax.persistence.criteria.Root;
+import org.apache.derby.drda.NetworkServerControl;
 import org.apache.derby.jdbc.EmbeddedConnectionPoolDataSource;
 import org.apache.derby.jdbc.EmbeddedDataSource;
 import test.Account;
@@ -59,9 +62,11 @@ public class App {
         System.out.println("a id " + a.getId());
     }
 
-    public static void main(String[] args) {
+    public static void main(String[] args) throws UnknownHostException, Exception {
         String userHomeDir = System.getProperty("user.home", ".");
         String systemDir = userHomeDir + "/derbydatabase";
+        NetworkServerControl nsc = new NetworkServerControl(InetAddress.getByName("localhost"), 1234);
+        nsc.start(null);
 
         // Set the db system directory.
         System.setProperty("derby.system.home", systemDir);
@@ -127,5 +132,6 @@ public class App {
             et.commit();
         }
         new File(systemDir).delete();
+        System.in.read();
     }
 }

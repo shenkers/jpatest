@@ -90,5 +90,10 @@
             <artifactId>openjpa-all</artifactId>
             <version>2.3.0</version>
         </dependency>
+        <dependency>
+            <groupId>org.apache.derby</groupId>
+            <artifactId>derbynet</artifactId>
+            <version>10.11.1.1</version>
+        </dependency>
     </dependencies>
 </project>
